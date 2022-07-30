@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Case Problem 1
+   
+   Layout styles for Slate and Pencil Tutoring
+   Author: Arleen Bautista
+   Date:   June 10, 2022
+   ---Assignement 4
+   Filename: sp_layout.css
+
+*/
+
+/* 3. Go to the sp_layout.css file in your editor. Go to the Window and Body Styles section. Create a */
+/* style rule for the html element that sets the height of the browser window at 100%. */
+
+/* Window and Body Styles */
+html {
+    height: 100%;
+}
+
+/* 4. Create a style rule for the page body that sets the width to 95% of the browser window ranging */
+/* from 640 pixels up to 960 pixels. Horizontally center the page body within the browser window. */
+/* Finally, Karen wants to ensure that the height of the page body is always at least as high as the */
+/* browser window itself. Set the minimum height of the browser window to 100%. */
+
+/* 6. Within the CSS Grid Styles section create a style rule that 
+displays the body element as a grid with four columns of length 1fr.     */
+
+body {
+    width: 95%;
+    min-width: 640px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*5. Add a style rule to display all inline images as blocks.*/
+img {
+    display: block;
+}
+
+/* CSS Grid Styles */
+
+/* 7. Create a style rule for the img element with id "logo" so that the logo image spans three columns */
+/* and has a width of 100%.     */
+
+img#logo {
+    grid-column: 1 / span 3;
+    width: 100%;
+}
+
+/* Horizontal Navigation List Styles */
+
+/*8. For the horizontal navigation list and the footer element create a style rule so that those
+elements span four columns. Create a style for the aside element to span two columns.*/
+
+nav.horizontal,
+footer{
+    grid-column: span 4;
+}
+
+aside {
+    grid-column: span 2;
+}
+
+/*9. Within the Horizontal Navigation List Styles section create a style rule for li elements nested
+within the horizontal navigation list that display each element as a block with a width of 12.5%
+and floated on the left margin--THIS IS CORRECT DONT CHANGE*/
+
+nav.horizontal li {
+    display: block;
+    width: 12.5%;
+    float: left;
+}
+
+/* Section Styles */
+/*10. Within the Section Styles section create a style rule for inline images within the section element
+that sets the width of the image to 50% and centers the image using a top/bottom margin of 0
+and a left/right margin of auto.*/
+
+section img {
+    width: 50%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*11. Create a style rule for paragraphs within the section element that sets the width of the
+paragraph to 70% and centers the paragraph using a top/bottom margin of 0 and a left/right
+margin of auto.*/
+section p {
+    width: 70%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Customer Comment Styles */
+
+/*12. Go to the Customer Comment Styles section and create a style rule for the aside element setting
+the width to 75% and the bottom padding to 30 pixels.*/
+
+aside {
+    width: 75%;
+    padding-bottom: 30px;
+}
+
+/*13. The six aside elements will be displayed in two columns. For odd-numbered aside elements,
+use the justify-self grid property to place the element on the end (right) margin. (Hint: Use
+the nth-of-type(odd) pseudo-class to select the odd-numbered aside elements.)*/
+
+aside:nth-of-type(odd) {
+    justify-self: right;
+}
+
+/*14. Float inline images nested within the aside element on the left with a width of 20%.*/
+aside img {
+    float: left;
+    width: 20%;
+}
+
+/*
+15. Float paragraphs nested within the aside element on the left with a width of 75% and a left
+margin of 5%.*/
+
+aside p {
+    float: left;
+    width: 75%;
+    margin-left: 5%;
+}
+
